@@ -1,0 +1,13 @@
+- name: Demo on condition
+  hosts: localhost
+  connection: local
+  tasks: 
+    - name: print hellow unicerse
+      ansible.builtin.debug:
+        msg: hellow universe
+      when: what == "universe"
+
+    - name: print hellow world
+      ansible.builtin.debug:
+        msg: hellow world
+      when: what == "world"
