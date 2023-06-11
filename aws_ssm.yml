@@ -1,4 +1,4 @@
-- nmae: print the aws ssm paremter 
+- name: print the aws ssm paremter 
   hosts: localhost
   connection: local
   tasks:
