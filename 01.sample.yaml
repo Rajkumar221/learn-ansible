@@ -4,3 +4,11 @@
     - name: Print Hello World
       ansible.builtin.debug:
         msg: Hello World
+
+
+- name: Demo Playbook1
+  hosts: all
+  tasks:
+    - name: print Hellow Universe
+      ansible.builtin.debug:
+        msg: Hellow Universe
