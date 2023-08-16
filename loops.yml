@@ -17,7 +17,7 @@
       loop: 
         - { name: apple, quantity: 100 }
         - { name: orange, quantity: 200 }
-        - { name: grapes, qtuantity: 300 }
+        - { name: grapes, quantity: 300 }
         - { name: banana, quantity: 400 }
 
     - name: print skills
