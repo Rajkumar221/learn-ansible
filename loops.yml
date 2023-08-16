@@ -20,7 +20,6 @@
 #         - { name: grapes, qtuantity: 300 }
 #         - { name: banana, quantity: 400 }
 
----  
 - name: Loops
   hosts: localhost
   connection: local
