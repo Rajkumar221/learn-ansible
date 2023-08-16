@@ -19,4 +19,17 @@
         - { name: orange, quantity: 200 }
         - { name: grapes, qtuantity: 300 }
         - { name: banana, quantity: 400 }
-        
+
+---  
+- name: Loops
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: print skills
+      ansible.builtin.debug:
+        msg: skill name - {{ item }}
+      loop:
+        - DevOps
+        - Linux
+        - Monitoring
+        - IaC
