@@ -1,12 +1,12 @@
 #demo to see how to load anothre file 
-- name: Demo on load another file 
+- name: Demo on load another file
   hosts: localhost
   connection: local
   tasks:
-   - name: print hellow world
-     ansible.builtin.debug:
-     msg: hellow world
+    - name: print hello world
+      ansible.builtin.debug:
+        msg: hello world
 
-   - name: Include universe file 
+    - name: Include universe file
       ansible.builtin.include_tasks:
         file: universe.yml
