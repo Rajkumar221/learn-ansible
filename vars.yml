@@ -1,5 +1,6 @@
 - name: declare variable 
-  hosts: all
+  hosts: localhost
+  connection: local
   vars:
     URL: example.com
   tasks:
