@@ -1,5 +1,6 @@
 - name: Demo playbook
-  hosts: all
+  hosts: localhost
+  connection: local
   tasks:
     - name: Print Hello World
       ansible.builtin.debug:
@@ -7,7 +8,8 @@
 
 
 - name: Demo Playbook1
-  hosts: all
+  hosts: localhost
+  connection: local
   tasks:
     - name: print Hellow Universe
       ansible.builtin.debug:
