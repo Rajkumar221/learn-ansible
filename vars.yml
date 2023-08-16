@@ -1,4 +1,4 @@
-- nmae: declare variable 
+- name: declare variable 
   hosts: localhost
   connection: local
   vars:
