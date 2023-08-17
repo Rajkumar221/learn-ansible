@@ -1,0 +1,31 @@
+- name: install nginx
+  ansible.builtin.yum:
+     name: nginx
+     state: latest
+
+- name: Removing Old App content
+  ansible.builtin.file:
+    path: /usr/share/nginx/html/*
+    state: absent
+
+- name: Downloading Frontend Content
+  ansible.builtin.unarchive:
+    src: https://roboshop-artifacts.s3.amazonaws.com/frontend.zip
+    dest: /usr/share/nginx/html
+    remote_src: yes
+
+- name: starting nginx server
+  ansible.builtin.systemd:
+    name: nginx
+    enabled: true
+    state: started
+
+
+# echo -e "\e[33mUpdate Frontend Configuration\e[0m"
+# cp /home/centos/Roboshop-Project/roboshop.conf /etc/nginx/default.d/roboshop.conf &>>/tmp/roboshop.log
+# stat_check $?
+
+# echo -e "\e[33mStarting Nginx Server\e[0m"
+# systemctl enable nginx &>>/tmp/roboshop.log
+# systemctl restart nginx &>>/tmp/roboshop.log
+# stat_check $?
